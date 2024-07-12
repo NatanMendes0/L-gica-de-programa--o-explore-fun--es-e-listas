@@ -1,6 +1,9 @@
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
+//chama a função para exibir a mensagem inicial
+exibirMensagemInicial();
+
 //exemplos de códigos que devem ser alterados para o código abaixo
 // let titulo = document.querySelector('h1');
 // titulo.innerHTML = 'Jogo do número secreto';
@@ -37,6 +40,12 @@ function verificarChute() {
     }
 }
 
+//exemplo de função para exibir mensagem inicial
+function exibirMensagemInicial() {
+    exibirTextoNaTela('h1', 'Jogo do número secreto');
+    exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
+}
+
 //exemplo de função de retorno de número aleatório
 function gerarNumeroAleatorio() {
     return parseInt(Math.random() * 10 + 1);
@@ -46,4 +55,13 @@ function gerarNumeroAleatorio() {
 function limparCampo() {
     chute = document.querySelector('input');
     chute.value = '';
+}
+
+//exemplo de função para reiniciar o jogo
+function reiniciarJogo() {
+    numeroSecreto = gerarNumeroAleatorio();
+    tentativas = 1;
+    document.getElementById('reiniciar').setAttribute('disabled', true);
+    exibirMensagemInicial();
+    limparCampo();
 }
