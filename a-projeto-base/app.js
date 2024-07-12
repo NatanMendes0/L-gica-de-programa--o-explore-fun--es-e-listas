@@ -1,4 +1,5 @@
 let listaDeNumerosSorteados = [];
+let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -49,7 +50,15 @@ function exibirMensagemInicial() {
 
 //exemplo de função de retorno de número aleatório
 function gerarNumeroAleatorio() {
-    let numeroEscolhido = parseInt(Math.random() * 10 + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+    let quantidadeDeNumerosSorteados = listaDeNumerosSorteados.length;
+
+    //limpa a lista de números sorteados
+    if (quantidadeDeNumerosSorteados == numeroLimite) {
+        listaDeNumerosSorteados = [];
+    }
+
+    //verifica se o número já foi sorteado
     if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
         return gerarNumeroAleatorio();
     } else {
