@@ -1,3 +1,5 @@
+let numeroSecreto = gerarNumeroAleatorio();
+
 //exemplos de códigos que devem ser alterados para o código abaixo
 // let titulo = document.querySelector('h1');
 // titulo.innerHTML = 'Jogo do número secreto';
@@ -15,5 +17,11 @@ exibirTextoNaTela('h1', 'Jogo do número secreto');
 exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
 
 function verificarChute() {
-    console.log('O botão foi clicado!')
+    let chute = document.querySelector('input').value;
+    console.log(chute == numeroSecreto);
+}
+
+//exemplo de função de retorno de número aleatório
+function gerarNumeroAleatorio() {
+    return parseInt(Math.random() * 10 + 1);
 }
