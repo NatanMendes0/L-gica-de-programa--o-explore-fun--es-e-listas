@@ -1,5 +1,5 @@
 # Repositório do curso de Lógica de programação: explore funções e listas, feito pela [Alura](https://cursos.alura.com.br/user/natancmendes)
-Para revisar meus conhecimentos em JavaScript, realizei o curso mencionado, oferecido pelo programa **Geração Caldeira**, proposto pelo [Instituto Caldeira](https://institutocaldeira.org.br/) Este repositório contém os códigos desenvolvidos durante o curso "Lógica de programação: explore funções e listas" da Alura.
+Para revisar meus conhecimentos em JavaScript, aprendidos ao longo do meu curso técnico pelo IFSUL - Gravataí,  realizei o curso mencionado, oferecido pelo programa **Geração Caldeira**, proposto pelo [Instituto Caldeira](https://institutocaldeira.org.br/) Este repositório contém os códigos desenvolvidos durante o curso "Lógica de programação: explore funções e listas" da Alura.
 
 ## Módulos e as atividades realizadas
 
