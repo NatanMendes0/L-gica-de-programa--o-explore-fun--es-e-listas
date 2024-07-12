@@ -1,3 +1,4 @@
+let listaDeNumerosSorteados = [];
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -12,7 +13,7 @@ exibirMensagemInicial();
 // paragrafo.innerHTML = 'Escolha um número entre 1 e 10';
 
 // devemos utilizar funções para evitar códigos repetidos
-function exibirTextoNaTela() {
+function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
 }
@@ -48,7 +49,13 @@ function exibirMensagemInicial() {
 
 //exemplo de função de retorno de número aleatório
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * 10 + 1);
+    let numeroEscolhido = parseInt(Math.random() * 10 + 1);
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
+        return gerarNumeroAleatorio();
+    } else {
+        listaDeNumerosSorteados.push(numeroEscolhido);
+        return numeroEscolhido;
+    }
 }
 
 //exemplo de função para limpar campo
